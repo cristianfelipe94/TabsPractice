@@ -1,0 +1,31 @@
+.mainTitle {
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+}
+
+.wrapperTitle {
+    border: 0.5em solid black;
+}
+
+.mainwrapper {
+    border: 0.2em solid black;
+}
+
+.btns {
+    display: inline-block;
+    border: 0.1em solid black;
+}
+
+.wrapperBtns:hover .wrapperContent {
+    display: block;
+}
+
+.wrapperBtns {
+    display: inline-block;
+}
+
+.wrapperContent {
+    border: 0.1em solid black;
+    display: none;
+}
