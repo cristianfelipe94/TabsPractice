@@ -1,3 +1,5 @@
+
+/*Variables.*/
 :root {
 	--red: #E23A59;
 	--lighblue: #44ADAD;
@@ -8,10 +10,17 @@
     --white: #FFFDFA;
 }
 
+/*Default, global rules for the HTML.*/
 html {
     background-color: var(--darkblue);
+    user-select: none;
 }
-   
+
+/*Title Styles.*/
+.mainwrapper {
+    margin: 2em auto 0; 
+}
+
 .wrapperTitle {
     margin: 0 0 1em;
     border-top: 0.2em solid var(--white);
@@ -24,13 +33,10 @@ html {
     color: var(--red);
 }
 
+/*Tabs Menu Styles.*/
 .secondaryWrapper{
     margin-top: 2em;
     border-bottom: 2px solid var(--white);
-}
-
-.mainwrapper {
-    margin: 2em auto 0; 
 }
 
 .btns {
@@ -65,6 +71,85 @@ html {
     margin: 0.4em 1em;
 }
 
+/*Media Styles*/
+.mediaBtns {
+    margin: 0.4em 1em;
+    position: absolute;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--darkblue);
+}
+
+#facebook {
+    bottom: 0;
+    left: 0;
+}
+
+#instagram {
+    bottom: 0;
+    right: 0;
+}
+
+/*Images Styles*/
+
+.wrapperImg {
+    display: none;
+    position: absolute;
+    width: 85vw;
+    height: 40vh;
+    background-color: var(--bone);
+    border-bottom: 0.2em solid var(--yellow);
+}
+
+.wrapperBtns:hover .wrapperImg {
+    display: block;
+}
+
+
+.imgContent {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30vh;
+    margin: 1em auto;
+}
+
+/*Arrow Styles*/
+.arrowL {
+    font-size: 2em;
+    opacity: 0.5;
+    color: var(--red);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0.2em;
+    z-index: 1;
+    transform: rotateY(180deg);
+    transition: 0.6s;
+}
+
+.arrowL:hover, .arrowR:hover {
+    color: var(--darkblue);
+    opacity: 1;
+    border: 0.1em solid var(--lighblue);
+    border-radius: 50%;
+    padding: 0.1em;
+}
+
+.arrowR {
+    font-size: 2em;
+    opacity: 0.5;
+    color: var(--red);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.2em;
+    z-index: 1;
+    transition: 0.6s;
+}
+
+/*Footer Styles*/
 .footer {
     margin: 1em 0.5em;
     position: absolute;
@@ -76,5 +161,4 @@ html {
     text-align: center;
     margin: 1em auto;
     border-top: 0.2em solid var(--darkblue);
-
 }
