@@ -1,19 +1,26 @@
 
 /*Variables.*/
 :root {
-	--red: #E23A59;
+    --red: #E23A59;
+    --darkred: #96616B;
 	--lighblue: #44ADAD;
     --darkblue: #3E506B;
     --yellow: #FCC82B;
+    --raceyellow: #F9A03F;
     --bone: #D1C7B8;
+    --lightbrown: #E2C290;
+    --darkbrown: #565656;
     --light: #B8C6D1;
     --white: #FFFDFA;
+    --lightbone: #F8F4F0;
 }
 
 /*Default, global rules for the HTML.*/
 html {
-    background-color: var(--darkblue);
+    background-color: var(--bone);
+    font-family: 'Lora', serif;
     user-select: none;
+    margin: 5vh 0;
 }
 
 /*Title Styles.*/
@@ -23,14 +30,15 @@ html {
 
 .wrapperTitle {
     margin: 0 0 1em;
-    border-top: 0.2em solid var(--white);
-    border-bottom: 0.2em solid var(--white);
+    border-top: 0.2em solid var(--darkbrown);
+    border-bottom: 0.2em solid var(--darkbrown);
 }
 
 .mainTitle {
+    font-family: 'Cinzel', serif;
     text-align: center;
     margin: 0 auto;
-    color: var(--red);
+    color: var(--darkbrown);
 }
 
 /*Tabs Menu Styles.*/
@@ -46,6 +54,11 @@ html {
     height: 3em;
     width: 10vw;
     border-radius: 30px 10px 0 0;
+    transition: 0.5s;
+}
+
+.btns:hover {
+    background-color: var(--darkblue);
 }
 
 .wrapperBtns:hover .wrapperContent {
@@ -62,8 +75,8 @@ html {
     position: absolute;
     width: 66.5vw;
     height: 20vh;
-    background-color: var(--bone);
-    border-bottom: 0.2em solid var(--yellow);
+    background-color: var(--white);
+    border-bottom: 0.2em solid var(--raceyellow);
 }
 
 .contentBtns {
@@ -77,7 +90,12 @@ html {
     position: absolute;
     font-size: 2em;
     text-decoration: none;
-    color: var(--darkblue);
+    color: var(--raceyellow);
+    transition: 0.6s;
+}
+
+.mediaBtns:hover {
+    color: var(--lighblue);
 }
 
 #facebook {
@@ -95,10 +113,10 @@ html {
 .wrapperImg {
     display: none;
     position: absolute;
-    width: 85vw;
-    height: 40vh;
-    background-color: var(--bone);
-    border-bottom: 0.2em solid var(--yellow);
+    width: 600px;
+    height: 50vh;
+    background-color: var(--white);
+    border-bottom: 0.2em solid var(--raceyellow);
 }
 
 .wrapperBtns:hover .wrapperImg {
@@ -111,15 +129,14 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    height: 30vh;
+    height: 40vh;
     margin: 1em auto;
 }
 
 /*Arrow Styles*/
 .arrowL {
     font-size: 2em;
-    opacity: 0.5;
-    color: var(--red);
+    color: var(--raceyellow);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -130,17 +147,15 @@ html {
 }
 
 .arrowL:hover, .arrowR:hover {
-    color: var(--darkblue);
-    opacity: 1;
-    border: 0.1em solid var(--lighblue);
+    color: var(--lighblue);
+    border: 0.1em solid var(--darkblue);
     border-radius: 50%;
     padding: 0.1em;
 }
 
 .arrowR {
     font-size: 2em;
-    opacity: 0.5;
-    color: var(--red);
+    color: var(--raceyellow);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -153,12 +168,52 @@ html {
 .footer {
     margin: 1em 0.5em;
     position: absolute;
-    bottom: 0;
+    bottom: 5vh;
     right: 0;
 }
 
 .footerText {
     text-align: center;
     margin: 1em auto;
-    border-top: 0.2em solid var(--darkblue);
+    border-top: 0.2em solid var(--white);
+}
+
+/*Responsive*/
+/*Responsive*/
+@media only screen and (max-width: 500px){
+
+    .mainTitle {
+        font-size: 1.8em;
+    }
+
+    .btns {
+        font-size: 0.9em;
+        height: 2.5em;
+        width: 16vw;
+    }
+
+    .wrapperContent {
+        width: 40vw;
+        height: 22vh;
+        font-size: 0.6em;
+        text-align: center;
+
+    }
+
+    .mediaBtns {
+        font-size: 2.2em;
+    }
+
+    .wrapperImg {
+        width: 75vw;
+        height: 30vh;
+    }
+
+    .imgContent {
+        height: 22vh;
+    }
+
+    .footer {
+        bottom: 30vh;
+    }
 }
