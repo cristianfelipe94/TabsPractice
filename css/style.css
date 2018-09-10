@@ -179,7 +179,6 @@ html {
 }
 
 /*Responsive*/
-/*Responsive*/
 @media only screen and (max-width: 500px){
 
     .mainTitle {
@@ -194,7 +193,7 @@ html {
 
     .wrapperContent {
         width: 40vw;
-        height: 22vh;
+        height: 35vh;
         font-size: 0.6em;
         text-align: center;
 
@@ -214,6 +213,6 @@ html {
     }
 
     .footer {
-        bottom: 20vh;
+        bottom: 10vh;
     }
 }
